@@ -9,7 +9,7 @@ import { toast } from 'sonner'
 import createChatSession from '../../../../../../utils/GeminiAIModel'
 import { db } from '../../../../../../utils/db'
 import { useUser } from '@clerk/nextjs'
-import { UserAnswer } from '../../../../../../utils/schema'
+
 
 const chatSession = createChatSession();
 

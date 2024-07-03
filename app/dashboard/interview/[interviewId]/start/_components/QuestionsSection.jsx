@@ -13,12 +13,10 @@ function QuestionsSection({mockInterviewQuestion, activeQuestionIndex}) {
     }
   }
 
-  // Access the interview_questions array
-  const questions = mockInterviewQuestion && mockInterviewQuestion.interview_questions
-    ? mockInterviewQuestion.interview_questions
-    : [];
+  // Access the questions directly from mockInterviewQuestion array
+  const questions = Array.isArray(mockInterviewQuestion) ? mockInterviewQuestion : [];
 
-  return mockInterviewQuestion && (
+  return (
     <div className='p-5 border rounded-lg'>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-5'>
         {questions.length > 0 ? (
